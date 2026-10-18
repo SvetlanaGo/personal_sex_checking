@@ -1,0 +1,33 @@
+https://www.kaggle.com/datasets/rai220/russian-cyrillic-names-and-sex
+
+bash
+
+Linux
+- unzip dataset.zip to PWD
+- use python3.11
+- use venv
+	python3.11 -m venv venv11
+	source venv11/bin/activate
+- python3 -m pip install -r requirements.txt
+- python3 train.py
+
+Windows
+- kaggle datasets download -d rai220/russian-cyrillic-names-and-sex
+- unzip russian-cyrillic-names-and-sex.zip
+- python -m venv .venv_train
+- .venv_train\Scripts\activate
+- python -m pip install -r requirements.txt
+- python train.py
+
+- python -m venv .venv_convert
+- .venv_convert\Scripts\activate
+- pip install tensorflow==2.15.0
+- pip install tensorflowjs==4.22.0 --no-deps
+- pip install tensorflow-decision-forests==1.8.1
+- pip install tf-keras==2.15.0
+- pip install tensorflow-hub
+- pip install jax jaxlib
+- pip install "jax<0.7" "jaxlib<0.7" "numpy<2"
+- python export_to_tfjs.py
+
+- deactivate
